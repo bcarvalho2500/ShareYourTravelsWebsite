@@ -13,31 +13,90 @@
 </header>
 <main>
    <section>
-      <fieldset>
-         <form action="www.randyconnolly.com/tests/process.php" method="post">
-            <table>
-               <thead>
-                  <caption>PHOTO DETAILS</caption>
-               </thead>
+      <form  method="POST" action="http://www.randyconnolly.com/tests/process.php">
+         <fieldset>
+               <legend>Photo Details</legend>
+               <label for="title">Title</label><br>
+               <input type="text" name="title" id="title" placeholder="Give your photo a descriptive name">
+               <br>
+               <label for="description">Description</label><br>
+               <textarea name="description" id="description" cols="100%" rows="5" placeholder="Adding a rich description will help with search results"></textarea>
+               <table>
+                  <tr>
+                     <td style="width: 50%;">
+                        <label for="continent">Continent</label> <br>
+                        <select name="continent" id="continent">
+                           <option value="default" selected disabled>Choose a continent</option>
+                           <option value="NorthAmerica">North America</option>
+                           <option value="SouthAmerica">South America</option>
+                           <option value="Europe">Europe</option>
+                           <option value="Africa">Africa</option>
+                           <option value="Asia">Asia</option>
+                           <option value="Antartica">Antartica</option>
+                           <option value="Australia">Australia</option>
+                        </select>
+                        <br>
+                        <label for="country">Country</label> <br>
+                        <select name="country" id="country">
+                           <option value="default" selected disabled>Choose a country</option>
+                           <option value="USA">United States of America</option>
+                           <option value="Canada">Canada</option>
+                           <option value="UK">United Kingdom</option>
+                           <option value="Spain">Spain</option>
+                           <option value="China">China</option>
+                           <option value="India">India</option>
+                           <option value="France">France</option>
+                        </select>
+                        <br>
+                        <label for="city">City</label> <br>
+                        <input type="text" name="city" id="city" placeholder="City">
+                     </td>
+                     <td style = "width: 50%;">
+                        <div class = "copyright">
+                           <label for="copyright">Copyright</label> <br>
+                           <input type="radio" name="copyright" id="rightsReserved" value = "rightsReserved">All Rights rights reserved <br>
+                           <input type="radio" name="copyright" id="creativeCommons" value="creativeCommons">Creative Commons
 
-               <tbody>
-                  <tr>
-                     <td>
-                        <label for="title">Title</label><br>
-                        <input type="text" name="title" id="title" placeholder="Give your photo a descriptive name">
+                        </div>
+
+                        <div class = "creativeCommonsType">
+                           <label for="creativeCommonsType">Creative Commons Type</label> <br>
+                           <input type="checkbox" name="creativeCommonsType[]" id="Attribution">Attribution <br>
+                           <input type="checkbox" name="creativeCommonsType[]" id="NonCommercial">Noncommercial <br>
+                           <input type="checkbox" name="creativeCommonsType[]" id="No Derivative Works">No Derivative Works <br>
+                        </div>
                      </td>
                   </tr>
                   <tr>
+                        <td>
+                           <p>I accept the software license
+                           <input type="checkbox" name="softwareLicense" id="softwareLicense">
+                           </p>
+                        </td>
+                  </tr>
+                  <tr>
                      <td>
-                        <label for="description">Description</label><br>
-                        <input type="text" name="description" id="description" placeholder="Adding a rich description will help with search results">
+                        <label for="ratePhoto">Rate this photo:</label> <br>
+                        <input type="number" name="ratePhoto" id="ratePhoto" max="10">
+                        <br>
+                        <label for="colorSelector">Color Collection</label> <br>
+                        <input type="color" name="colorSelector" id="colorSelector">
+                     </td>
+                     <td>
+                        <div class = "dateTime">
+                           <label for="dateTaken">Date Taken:</label> <br>
+                           <input type="date" name="dateTaken" id="dateTaken">
+                           <br>
+                           <label for="timeTaken">Time Taken:</label> <br>
+                           <input type="time" name="timeTaken" id="timeTaken">
+                        </div>
                      </td>
                   </tr>
-               </tbody>
             </table>
          
-         </form>
-      </fieldset>
+            <button >Submit</button>
+         </fieldset>
+      </form>
    </section>
 </main>  
 
