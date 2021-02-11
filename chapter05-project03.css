@@ -94,3 +94,8 @@ button{
    border: 0 transparent;
    border-radius: 10px;
 }
+
+.buttonField{
+   padding: 5px;
+   background-color: #9FA8DA;
+}
